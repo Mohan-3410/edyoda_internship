@@ -453,6 +453,7 @@
   padding: 16px;
   position: relative;
   width: 100%;
+  cursor: pointer;
 }
 
 .coding-assignment .text-11 {
@@ -558,6 +559,7 @@
   padding: 16px;
   position: relative;
   width: 100%;
+  cursor: pointer;
 }
 
 .coding-assignment .text-field-4 {
@@ -575,6 +577,7 @@
   padding: 16px;
   position: relative;
   width: 100%;
+  cursor: pointer;
 }
 
 .coding-assignment .summary-container {
