@@ -3,16 +3,46 @@ import ButtonContainer from "./ButtonContainer";
 import ProgressBar from "./ProgressBar";
 
 export default function Form() {
+  const link1 = "https://generation-sessions.s3.amazonaws.com/91825f7a982f4d8242833bb787e27179/img/radio-button-1.svg"
+  const link2 = "https://generation-sessions.s3.amazonaws.com/91825f7a982f4d8242833bb787e27179/img/radio-button-2.svg"
   const [total, setTotal] = useState(0);
+  const [active, setActive] = useState({
+    active1: null,
+    active2: null,
+    active3: null
+  })
+  const [checkbox, setCheckbox] = useState({
+    checkbox1: link1,
+    checkbox2: link1,
+    checkbox3: link1
+  })
 
   function updateValue1() {
     setTotal(179);
+    setCheckbox(()=>{
+      return { checkbox1: link2,checkbox2: link1,checkbox3:link1 }
+    })
+    setActive (()=>{
+      return {active1: "active", active2: null, active3: null}
+    })
   }
   function updateValue2() {
     setTotal(149);
+    setCheckbox((prev)=>{
+      return { checkbox1: link1,checkbox2: link2,checkbox3:link1 }
+    })
+    setActive (()=>{
+      return {active1: null, active2: "active", active3: null}
+    })
   }
   function updateValue3() {
     setTotal(99);
+    setCheckbox((prev)=>{
+      return { checkbox1: link1,checkbox2: link1,checkbox3:link2 }
+    })
+    setActive (()=>{
+      return {active1: null, active2: null, active3: "active"}
+    })
   }
   return (
     <div className="form">
@@ -44,11 +74,11 @@ export default function Form() {
             <div className="text-wrapper-3">Offer expired</div>
           </div>
         </div>
-        <div className="text-field-2" onClick={updateValue1}>
+        <div className={`text-field-2 ${active.active1}`} onClick={updateValue1}>
           <img
             className="radio-button"
             alt="Radio button"
-            src="https://generation-sessions.s3.amazonaws.com/91825f7a982f4d8242833bb787e27179/img/radio-button-2.svg"
+            src={checkbox.checkbox1}
           />
           <div className="text-container">
             <div className="text-11">12 Months Subscription</div>
@@ -67,11 +97,11 @@ export default function Form() {
             <div className="text-wrapper-4">Recommended</div>
           </div>
         </div>
-        <div className="text-field-3" onClick={updateValue2}>
+        <div className={`text-field-3 ${active.active2}`} onClick={updateValue2}>
           <img
             className="radio-button"
             alt="Radio button"
-            src="https://generation-sessions.s3.amazonaws.com/91825f7a982f4d8242833bb787e27179/img/radio-button-1.svg"
+            src={checkbox.checkbox2}
           />
           <div className="text-container">
             <div className="text-11">6 Months Subscription</div>
@@ -87,11 +117,11 @@ export default function Form() {
             </div>
           </div>
         </div>
-        <div className="text-field-4" onClick={updateValue3}>
+        <div className={`text-field-4 ${active.active3}`} onClick={updateValue3}>
           <img
             className="radio-button"
             alt="Radio button"
-            src="https://generation-sessions.s3.amazonaws.com/91825f7a982f4d8242833bb787e27179/img/radio-button-1.svg"
+            src={checkbox.checkbox3}
           />
           <div className="text-container">
             <div className="text-11">3 Months Subscription</div>
