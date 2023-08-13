@@ -458,6 +458,9 @@
   width: 100%;
   cursor: pointer;
 }
+.coding-assignment .text-field-2:hover{
+  background-color: hsl(0, 0%, 97%);
+}
 .coding-assignment .text-field-2.active{
   background-color: #d7ecdd;
   border: 2px solid;
@@ -570,6 +573,9 @@
   width: 100%;
   cursor: pointer;
 }
+.coding-assignment .text-field-3:hover{
+  background-color: hsl(0, 0%, 97%);
+}
 
 .coding-assignment .text-field-3.active{
   background-color: #d7ecdd;
@@ -592,6 +598,9 @@
   position: relative;
   width: 100%;
   cursor: pointer;
+}
+.coding-assignment .text-field-4:hover{
+  background-color: hsl(0, 0%, 97%);
 }
 .coding-assignment .text-field-4.active{
   background-color: #d7ecdd;
@@ -800,6 +809,7 @@
   border: 2px solid;
   border-color: #f77171;
   border-radius: 4px;
+  color: #f77171;
   display: flex;
   flex: 1;
   flex-grow: 1;
@@ -810,9 +820,15 @@
   position: relative;
   cursor: pointer;
 }
+.coding-assignment .secondary-button:hover{
+  background-color: #47b968;
+  border-radius: 4px;
+  border: 2px solid #47b968;
+  color: #ffffff;
+}
 
 .coding-assignment .text-18 {
-  color: #f77171;
+  /* color: #f77171; */
   font-family: "Roboto", Helvetica;
   font-size: 16px;
   font-weight: 700;
@@ -826,7 +842,9 @@
 
 .coding-assignment .primary-button-2 {
   align-items: center;
-  background-color: #47b968;
+  color: #f77171;
+  border: 2px solid;
+  border-color: #f77171;
   border-radius: 4px;
   display: flex;
   flex: 1;
@@ -840,7 +858,7 @@
 }
 
 .coding-assignment .text-19 {
-  color: #ffffff;
+  /* color: #f77171; */
   font-family: "Roboto", Helvetica;
   font-size: 16px;
   font-weight: 700;
@@ -852,6 +870,12 @@
   width: fit-content;
 }
 
+.coding-assignment .primary-button-2:hover{
+  background-color: #47b968;
+  border-radius: 4px;
+  border: 2px solid #47b968;
+  color: #ffffff;
+}
 .coding-assignment .icon-container {
   align-items: center;
   align-self: stretch;

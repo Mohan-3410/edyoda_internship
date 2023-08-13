@@ -4,10 +4,10 @@ export default function ButtonContainer() {
   return (
     <div className="button-container">
       <div className="secondary-button">
-        <div className="text-18">CANCEL</div>
+        <p className="text-18">CANCEL</p>
       </div>
       <div className="primary-button-2">
-        <div className="text-19">PROCEED TO PAY</div>
+        <p className="text-19">PROCEED TO PAY</p>
       </div>
     </div>
   );
